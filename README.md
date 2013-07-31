@@ -3,7 +3,7 @@ DASM
 Dynamic Active Shape Models
 
 Summary:
-This application is designed with the sole purpose of automatically locating landmarks on objects in images. In particular, the application is based on Active Shape Models and the extensions to the original algorithm provided by STASM 3.1. In short, the software provides a means of training a "model" from a set of images with manually annotated landmarks. The model can then be used to identify landmarks on 
+This application is designed with the sole purpose of automatically locating landmarks on objects in images. In particular, the application is based on Active Shape Models and the extensions to the original algorithm provided by STASM 3.1. In short, the software provides a means of training a "model" from a set of images with manually annotated landmarks. The model can then be used to identify landmarks on new images.
 
 Building the project:
 The software can be built in either x86 or x64 bit modes. The software has thus far only been tested on the Windows platform, but all of the necessary dependencies are supported cross-platform, so there it is therefore possible to build the software on Linux/OSX. On Windows, the easiest method is to grab the Visual Studio project file and build from there. However, if you do not have Visual Studio, you can compile the project using gcc. 
