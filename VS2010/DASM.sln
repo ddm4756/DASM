@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DASM", "DASM\DASM.vcxproj", "{217C6501-4E38-48B1-9143-A432896CD668}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		DASM|Win32 = DASM|Win32
+		DASM|x64 = DASM|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{217C6501-4E38-48B1-9143-A432896CD668}.Debug|Win32.ActiveCfg = Debug|Win32
+		{217C6501-4E38-48B1-9143-A432896CD668}.Debug|Win32.Build.0 = Debug|Win32
+		{217C6501-4E38-48B1-9143-A432896CD668}.Debug|x64.ActiveCfg = Debug|x64
+		{217C6501-4E38-48B1-9143-A432896CD668}.Debug|x64.Build.0 = Debug|x64
+		{217C6501-4E38-48B1-9143-A432896CD668}.DASM|Win32.ActiveCfg = DASM|Win32
+		{217C6501-4E38-48B1-9143-A432896CD668}.DASM|Win32.Build.0 = DASM|Win32
+		{217C6501-4E38-48B1-9143-A432896CD668}.DASM|x64.ActiveCfg = DASM|x64
+		{217C6501-4E38-48B1-9143-A432896CD668}.DASM|x64.Build.0 = DASM|x64
+		{217C6501-4E38-48B1-9143-A432896CD668}.Release|Win32.ActiveCfg = Release|Win32
+		{217C6501-4E38-48B1-9143-A432896CD668}.Release|Win32.Build.0 = Release|Win32
+		{217C6501-4E38-48B1-9143-A432896CD668}.Release|x64.ActiveCfg = Release|x64
+		{217C6501-4E38-48B1-9143-A432896CD668}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
