@@ -70,24 +70,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\OpenCV2.4\x86\CPU\include;C:\OpenCV2.4\x86\CPU\include\opencv;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\include;C:\Users\IISIS\Documents\IISIS\3rdparty\pittpatt\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\OpenCV2.4\x64\CPU\include;C:\OpenCV2.4\x64\CPU\include\opencv;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>C:\OpenCV2.4\x86\CPU\lib;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\x86\lib;C:\Users\IISIS\Documents\IISIS\3rdparty\pittpatt\x86\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\OpenCV2.4\x64\CPU\lib;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\x64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\IISIS\Documents\IISIS\3rdparty\boost\include;C:\Users\IISIS\Desktop\opencv\include\opencv;C:\Users\IISIS\Desktop\opencv\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\IISIS\Desktop\opencv\build\x64\vc10\lib;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\x64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>C:\OpenCV2.4\x86\CPU\lib;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\x86\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\OpenCV2.4\x86\CPU\include;C:\OpenCV2.4\x86\CPU\include\opencv;C:\Users\IISIS\Documents\IISIS\3rdparty\boost\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,7 +95,6 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opencv_imgproc240d.lib;opencv_core240d.lib;opencv_highgui240d.lib;opencv_objdetect240d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\IISIS\Desktop\boost_1_53_0\stage\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -111,7 +102,6 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>C:\OpenCV2.4\x64\CPU\include</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -125,7 +115,6 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\OpenCV2.4\x86\CPU\include; $(ADVISOR_XE_2013_DIR)\include</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
@@ -134,7 +123,6 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>opencv_imgproc240.lib;opencv_core240.lib;opencv_highgui240.lib;opencv_objdetect240.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\OpenCV2.4\x86\CPU\lib;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,33 +132,28 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>C:\OpenCV2.4\x64\CPU\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opencv_core245.lib;opencv_highgui245.lib;opencv_objdetect245.lib;opencv_imgproc245.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\OpenCV2.4\x64\CPU\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core240.lib;opencv_highgui240.lib;opencv_objdetect240.lib;opencv_imgproc240.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Covariance.cpp" />
-    <ClCompile Include="FileIO.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="PCA.cpp" />
-    <ClCompile Include="Profile.cpp" />
-    <ClCompile Include="Detect.cpp" />
-    <ClCompile Include="Search.cpp" />
-    <ClCompile Include="Shape.cpp" />
-    <ClCompile Include="Train.cpp" />
+    <ClCompile Include="src/Covariance.cpp" />
+    <ClCompile Include="src/FileIO.cpp" />
+    <ClCompile Include="src/main.cpp" />
+    <ClCompile Include="src/PCA.cpp" />
+    <ClCompile Include="src/Profile.cpp" />
+    <ClCompile Include="src/Detect.cpp" />
+    <ClCompile Include="src/Search.cpp" />
+    <ClCompile Include="src/Shape.cpp" />
+    <ClCompile Include="src/Train.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
