@@ -71,7 +71,7 @@ class Constants
 private:
 	int profLength2d;	// for 2d profiles (Square profile, so = width or height not width x height)
 	int profLength1d;	// for 1d profiles
-	int border;			// border padding to avoid out of bounds image accesses
+	int border;		// border padding to avoid out of bounds image accesses
 	int num1DLevels;	// levels of the pyramid search for 1D profiles (resolutions)
 	int num2DLevels;	// levels of pyramid search for 2D 
 	int num_eigs;		// Maximum eigen vectors to use when conforming to the shape model
@@ -83,7 +83,8 @@ private:
 	Size stdSize;		// standard image size for training
 
 	
-	Constants(){		// Default Values
+	Constants()		// Default Values
+	{
 		profLength2d = 9; 
 		profLength1d = 9;	
 		border = profLength2d; 
@@ -95,24 +96,29 @@ private:
 		verbose = false;
 		stdSize.width = 340;
 		stdSize.height = 400;
-	};
+	}
 
 public:
 
-	static Constants *instance(){
+	static Constants* instance()
+	{
 
-		if(!m_pInstance){
+		if (!m_pInstance)
+		{
 			m_pInstance = new Constants();
 		}
 		return m_pInstance;
-	};
-	void setFromModel(int n1d, int n2d, int p1d, int p2d){ // Constructor from Model info
+	}
+
+	void setFromModel(int n1d, int n2d, int p1d, int p2d) // Constructor from Model info
+	{
 		profLength2d = p2d; 
 		profLength1d = p1d;	
 		border = profLength2d; 
 		num1DLevels = n1d;	
 		num2DLevels = n2d;
-	};
+	}
+
 	void setP1d(int p){profLength1d = p;}
 	void setP2d(int p){profLength2d = p;}
 	void setb(int b){border = b;}
@@ -140,7 +146,8 @@ public:
 	float getEigPercent(){return eigPercent;}
 	bool isVerbose(){return verbose;}
 
-	enum detectorEnum_t{ 
+	enum detectorEnum_t
+	{ 
 		VJ,
 		PP
 		// Add here if you have more detectors
