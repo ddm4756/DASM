@@ -84,8 +84,6 @@ void VJ_Detector::detect(Shape &shape) const{
 		face[0].x *= 2;
 		face[0].y *= 2;
 		shape.setFaceROI(face[0]);		// Only use the biggest face found (1st face found)
-
-		rectangle(tempMat,face[0], Scalar(0,255,0));
 	}
 	else{ // Face was not found, store a -1.
 
