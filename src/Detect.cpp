@@ -74,8 +74,7 @@ void VJ_Detector::detect(Shape &shape) const{
 	Mat frame_gray = shape.getOrigImgData(); 
 	Size halfSize = Size(frame_gray.cols/2, frame_gray.rows/2); // Half the size of the image to speed up the detection (So don't use really small images...)
 	resize(frame_gray, frame_gray, halfSize,0,0,INTER_CUBIC);
-	Mat tempMat;
-	cvtColor(shape.getOrigImgData(),tempMat,CV_GRAY2BGR);
+
 	face_cascade->detectMultiScale( frame_gray, face, scaleFactor, minNeighbors, 0|CV_HAAR_SCALE_IMAGE, Size(30, 30) );  // Perform the OpenCV detection
 
 	if(face.size() > 0){  // If face is found, continue
@@ -90,8 +89,6 @@ void VJ_Detector::detect(Shape &shape) const{
 	}
 	else{ // Face was not found, store a -1.
 
-		imshow("window",tempMat);
-		cvWaitKey();
 		Rect temp;
 		temp.width = -1;
 		shape.setFaceROI(temp);
